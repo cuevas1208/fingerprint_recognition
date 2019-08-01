@@ -6,7 +6,6 @@
 
 ## Summary
 
-Some implementations of fingerprint recognition algorithm
 This repository proposes a fingerprint recognition chain based on 
 based on generic algorithms and tools for filtering images. 
 The results are retrieved and validated using Python. 
