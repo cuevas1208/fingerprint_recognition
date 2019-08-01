@@ -22,7 +22,7 @@ install requirement
 
     pip install --user --requirement requirements.txt
 
-run fingerprint detection. Finegerprint_pipline.py will process images
+**Run fingerprint detection**. Finegerprint_pipline.py will process images
 from './sample_inputs/' and results will be store at './output/' 
  
     python finegerprint_pipline.py
