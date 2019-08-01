@@ -2,181 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2d2c81-0390-499f-a22a-799bcd4b9549" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/biometric.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/results.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finegerprint_pipline.py" beforeDir="false" afterPath="$PROJECT_DIR$/finegerprint_pipline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/101_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/101_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/102_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/102_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/103_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/103_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/104_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/104_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/105_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/105_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/106_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/106_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/107_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/107_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/108_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/108_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/109_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/109_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_1.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_2.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_3.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_3.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_4.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_4.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_5.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_5.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_6.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_6.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_7.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_7.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_inputs/110_8.tif" beforeDir="false" afterPath="$PROJECT_DIR$/sample_inputs/110_8.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/crossing_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/crossing_number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/frequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/frequency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/gabor_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/gabor_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/orientation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/orientation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/poincare.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/poincare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/segmentation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/skeletonize.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/skeletonize.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="12">
-                <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <first_editor relative-caret-position="510">
+                <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -293,8 +119,8 @@
         <option value="$PROJECT_DIR$/utils/skeletonize.py" />
         <option value="$PROJECT_DIR$/utils/crossing_number.py" />
         <option value="$PROJECT_DIR$/utils/poincare.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/finegerprint_pipline.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -449,19 +275,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21256831" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14038877" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.14038877" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39524838" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.25053996" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25053996" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3265086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -687,8 +514,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="12">
-            <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <first_editor relative-caret-position="510">
+            <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
