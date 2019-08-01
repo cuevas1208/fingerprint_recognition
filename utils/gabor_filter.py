@@ -95,4 +95,6 @@ def gabor_filter(im, orient, freq, kx=0.65, ky=0.65):
         img_block = im[r-sze:r+sze + 1][:,c-sze:c+sze + 1]
         newim[r][c] = np.sum(img_block * gabor_filter[int(orientindex[r//16][c//16]) - 1])
 
-    return(newim)
+    gabor_img = 255 - np.array((newim < 0)*255).astype(np.uint8)
+
+    return gabor_img

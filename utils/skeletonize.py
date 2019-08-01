@@ -9,8 +9,8 @@ computation time compared to the other algorithms. [https://airccj.org/CSCP/vol7
 import numpy as np
 import cv2 as cv
 from utils.crossing_number import calculate_minutiaes
-
-
+from skimage.morphology import skeletonize as skelt
+from skimage.morphology import thin
 def skeletonize(image_input):
     """
     https://scikit-image.org/docs/dev/auto_examples/edges/plot_skeleton.html
@@ -24,13 +24,11 @@ def skeletonize(image_input):
     image[image_input == 0] = 1.0
     output = np.zeros_like(image_input)
 
-    from skimage.morphology import skeletonize, thin
-
-    skeleton = skeletonize(image)
+    skeleton = skelt(image)
 
     """uncomment for testing"""
-    thinned = thin(image)
-    thinned_partial = thin(image, max_iter=25)
+    # thinned = thin(image)
+    # thinned_partial = thin(image, max_iter=25)
     #
     # def minu_(skeleton, name):
     #     cv.imshow('thin_'+name, output)

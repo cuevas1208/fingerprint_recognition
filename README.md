@@ -15,7 +15,6 @@ The results are retrieved and validated using Python.
 * python 3.7
 * python opencv
 
-
 ### How to use it
 
 install requirement
@@ -27,6 +26,8 @@ from './sample_inputs/' and results will be store at './output/'
  
     python finegerprint_pipline.py
  
+### Dataset 
+Dataset ussed for this project can be found in this [LINK](http://bias.csr.unibo.it/fvc2002/download.asp)
 
 ### Algorithm Pipeline
 The techniques of fingerprint recognition image enhancement are based on 
@@ -37,6 +38,8 @@ ridges in a fingerprint.
 ![pipeline](./docs/pipeline.png)
 
 ### Results
+The following image shows pipeline results at each step
+
 Ending (Green) -
 Bifurcation (Blue) -
 Delta (Red) -

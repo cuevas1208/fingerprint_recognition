@@ -61,17 +61,17 @@ def ridge_freq(im, mask, orient, block_size, kernel_size, minWaveLength, maxWave
 
     for row in range(0, rows - block_size, block_size):
         for col in range(0, cols - block_size, block_size):
-            blkim = im[row:row + block_size][:, col:col + block_size]
-            blkor = orient[row // block_size][col // block_size]
-            freq[row:row + block_size][:, col:col + block_size] = frequest(blkim, blkor, kernel_size, minWaveLength, maxWaveLength)
+            image_block = im[row:row + block_size][:, col:col + block_size]
+            angle_block = orient[row // block_size][col // block_size]
+            if angle_block:
+                freq[row:row + block_size][:, col:col + block_size] = frequest(image_block, angle_block, kernel_size, minWaveLength, maxWaveLength)
 
     freq = freq*mask
     freq_1d = np.reshape(freq,(1,rows*cols))
     ind = np.where(freq_1d>0)
     ind = np.array(ind)
     ind = ind[1,:]
-
     non_zero_elems_in_freq = freq_1d[0][ind]
-    medianfreq = np.median(non_zero_elems_in_freq) *mask
+    medianfreq = np.median(non_zero_elems_in_freq) * mask
 
     return medianfreq

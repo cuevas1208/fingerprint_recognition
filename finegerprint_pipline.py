@@ -10,6 +10,7 @@ from utils.frequency import ridge_freq
 from utils import orientation
 from utils.crossing_number import calculate_minutiaes
 from tqdm import tqdm
+from utils.skeletonize import skeletonize
 
 
 def fingerprint_pipline(input_img):
@@ -37,11 +38,9 @@ def fingerprint_pipline(input_img):
     freq = ridge_freq(normim, mask, angles, block_size, kernel_size=5, minWaveLength=5, maxWaveLength=15)
 
     # create gabor filter and do the actual filtering
-    newim = gabor_filter(normim, angles, freq)
-    gabor_img = 255 - np.array((newim < 0)*255).astype(np.uint8)
+    gabor_img = gabor_filter(normim, angles, freq)
 
     # thinning oor skeletonize
-    from utils.skeletonize import skeletonize
     thin_image = skeletonize(gabor_img)
 
     # minutias

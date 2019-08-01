@@ -32,7 +32,6 @@ def poincare_index_at(i, j, angles, tolerance):
 
 
 def calculate_singularities(im, angles, tolerance, W, mask):
-    (y, x) = im.shape
     result = cv.cvtColor(im, cv.COLOR_GRAY2RGB)
 
     # DELTA: RED, LOOP:ORAGNE, whorl:INK
@@ -40,13 +39,12 @@ def calculate_singularities(im, angles, tolerance, W, mask):
 
     for i in range(3, len(angles) - 2):             # Y
         for j in range(3, len(angles[i]) - 2):      # x
-            singularity = poincare_index_at(i, j, angles, tolerance)
-            if singularity != "none":
-
-                # mask any singularity outside of the mask
-                mask_slice = mask[(i-2)*W:(i+3)*W, (j-2)*W:(j+3)*W]
-                mask_flag = np.sum(mask_slice)
-                if mask_flag == (W*5)**2:
+            # mask any singularity outside of the mask
+            mask_slice = mask[(i-2)*W:(i+3)*W, (j-2)*W:(j+3)*W]
+            mask_flag = np.sum(mask_slice)
+            if mask_flag == (W*5)**2:
+                singularity = poincare_index_at(i, j, angles, tolerance)
+                if singularity != "none":
                     cv.rectangle(result, ((j+0)*W, (i+0)*W), ((j+1)*W, (i+1)*W), colors[singularity], 3)
 
     return result

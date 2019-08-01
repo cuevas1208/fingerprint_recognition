@@ -9,7 +9,7 @@ def calculate_angles(im, W, smoth=False):
     https://pdfs.semanticscholar.org/6e86/1d0b58bdf7e2e2bb0ecbf274cee6974fe13f.pdf
     :param im:
     :param W: int width of the ridge
-    :return:
+    :return: array
     """
     j1 = lambda x, y: 2 * x * y
     j2 = lambda x, y: x ** 2 - y ** 2
@@ -110,12 +110,14 @@ def get_line_ends(i, j, W, tang):
 def visualize_angles(im, mask, angles, W):
     (y, x) = im.shape
     result = cv.cvtColor(np.zeros(im.shape, np.uint8), cv.COLOR_GRAY2RGB)
-
+    mask_threshold = (W-1)**2
     for i in range(1, x, W):
         for j in range(1, y, W):
-            tang = math.tan(angles[(j - 1) // W][(i - 1) // W])
-            (begin, end) = get_line_ends(i, j, W, tang)
-            cv.line(result, begin, end, color=150)
+            radian = np.sum(mask[j - 1:j + W, i-1:i+W])
+            if radian > mask_threshold:
+                tang = math.tan(angles[(j - 1) // W][(i - 1) // W])
+                (begin, end) = get_line_ends(i, j, W, tang)
+                cv.line(result, begin, end, color=150)
 
     cv.resize(result, im.shape, result)
     return result
