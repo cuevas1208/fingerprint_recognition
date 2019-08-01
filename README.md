@@ -38,11 +38,11 @@ ridges in a fingerprint.
 ![pipeline](./docs/pipeline.png)
 
 ### Results
-Ending - Green
-Bifurcation - Blue
-Delta - Red
-Loop - Orange
-Whorl -Pink
+Ending (Green) -
+Bifurcation (Blue) -
+Delta (Red) -
+Loop (Orange) - 
+Whorl (Pink)
 
 ![results](./docs/results.png)
 

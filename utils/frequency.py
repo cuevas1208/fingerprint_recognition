@@ -7,29 +7,19 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
     """
     Based on https://pdfs.semanticscholar.org/ca0d/a7c552877e30e1c5d87dfcfb8b5972b0acd9.pdf pg.14
     Function to estimate the fingerprint ridge frequency within a small block
-    of a fingerprint image.  This function is used by RIDGEFREQ
-    :param im: Image block to be processed.
-    :param orientim: Ridge orientation image of image block.
-    :param kernel_size: Window length used to identify peaks. This should be an odd integer, say 3 or 5.
-    :param minWaveLength: Minimum and maximum ridge wavelengths, in pixels, considered acceptable.
-    :param maxWaveLength: Maximum ridge wavelengths, in pixels, considered acceptable.
-    :return:
-        freqim: An image block the same size as im with all values set to the estimated ridge spatial frequency.  If a
-                ridge frequency cannot be found, or cannot be found within the limits set by min and max Wavlength
-                freqim is set to zeros.
+    of a fingerprint image.
+    An image block the same size as im with all values set to the estimated ridge spatial frequency.  If a
+    ridge frequency cannot be found, or cannot be found within the limits set by min and max Wavlength freqim is set to zeros.
     """
     rows,cols = np.shape(im)
     
     # Find mean orientation within the block. This is done by averaging the
-    # sines and cosines of the doubled angles before reconstructing the
-    # angle again.  This avoids wraparound problems at the origin.
+    # sines and cosines of the doubled angles before reconstructing the angle again.
     cosorient = np.mean(np.cos(2*orientim))
     sinorient = np.mean(np.sin(2*orientim))
     block_orient = math.atan2(sinorient,cosorient)/2
     
     # Rotate the image block so that the ridges are vertical
-    #ROT_mat = cv2.getRotationMatrix2D((cols/2,rows/2),orient/np.pi*180 + 90,1)    
-    #rotim = cv2.warpAffine(im,ROT_mat,(cols,rows))
     rotim = scipy.ndimage.rotate(im,block_orient/np.pi*180 + 90,axes=(1,0),reshape = False,order = 3,mode = 'nearest')
 
     # Now crop the image so that the rotated image does not contain any
@@ -65,8 +55,7 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
 
 def ridge_freq(im, mask, orient, block_size, kernel_size, minWaveLength, maxWaveLength):
     # Function to estimate the fingerprint ridge frequency across a
-    # fingerprint image. This is done by considering blocks of the image and
-    # determining a ridgecount within each block by a call to FREQEST.
+    # fingerprint image.
     rows,cols = im.shape
     freq = np.zeros((rows,cols))
 
