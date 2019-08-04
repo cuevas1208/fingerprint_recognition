@@ -2,9 +2,9 @@
 To facilitate extraction of minutiae the image must be skeletonized: a sequence of morphological
 erosion operations will reduce the thickness of the striations until the latter is equal to one pixel
 while maintaining the connectivity of the striations ( That is to say that the continuity of the
-striaes must be respected, holes must not be inserted). We used the Rosenfeld algorithm [9] for its
-simplicity and because it is well adopted at the hardware implementation as it has a reduced
-computation time compared to the other algorithms. [https://airccj.org/CSCP/vol7/csit76809.pdf pg.91]
+striaes must be respected, holes must not be inserted). While some papers use Rosenfeld algorithm for its
+simplicity. [https://airccj.org/CSCP/vol7/csit76809.pdf pg.91] I used skimage Zha84 A fast parallel algorithm for
+thinning digital patterns, T. Y. Zhang and C. Y. Suen, Communications of the ACM, March 1984, Volume 27, Number 3.
 """
 import numpy as np
 import cv2 as cv
