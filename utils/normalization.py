@@ -21,9 +21,7 @@ def normalize_pixel(x, v0, v, m, m0):
     :return: normilized pixel
     """
     dev_coeff = sqrt((v0 * ((x - m)**2)) / v)
-    if x > m:
-        return m0 + dev_coeff
-    return m0 - dev_coeff
+    return m0 + dev_coeff if x > m else m0 - dev_coeff
 
 def normalize(im, m0, v0):
     m = np.mean(im)

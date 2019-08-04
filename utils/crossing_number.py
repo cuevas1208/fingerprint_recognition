@@ -9,8 +9,8 @@ def minutiae_at(pixels, i, j, kernel_size):
     Then the crossing number algorithm will look at 3x3 pixel blocks:
 
     if middle pixel is black (represents ridge):
-    if pixel on boundary are crossed with the ridge once, then we've found ridge ending
-    if pixel on boundary are crossed with the ridge three times, then we've found ridge bifurcation
+    if pixel on boundary are crossed with the ridge once, then it is a possible ridge ending
+    if pixel on boundary are crossed with the ridge three times, then it is a ridge bifurcation
 
     :param pixels:
     :param i:
@@ -37,8 +37,8 @@ def minutiae_at(pixels, i, j, kernel_size):
             crossings += abs(values[k] - values[k + 1])
         crossings //= 2
 
-        # if pixel on boundary are crossed with the ridge once, then we've found ridge ending
-        # if pixel on boundary are crossed with the ridge three times, then we've found ridge bifurcation
+        # if pixel on boundary are crossed with the ridge once, then it is a possible ridge ending
+        # if pixel on boundary are crossed with the ridge three times, then it is a ridge bifurcation
         if crossings == 1:
             return "ending"
         if crossings == 3:
