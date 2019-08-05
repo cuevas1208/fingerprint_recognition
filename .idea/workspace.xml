@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2d2c81-0390-499f-a22a-799bcd4b9549" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finegerprint_pipline.py" beforeDir="false" afterPath="$PROJECT_DIR$/finegerprint_pipline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/frequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/frequency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/gabor_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/gabor_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/normalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normalization.py" afterDir="false" />
-    </list>
+    <list default="true" id="ab2d2c81-0390-499f-a22a-799bcd4b9549" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finegerprint_pipline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="558">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -28,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/gabor_filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+            <state relative-caret-position="429">
+              <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding>
                 <element signature="e#668#686#0" expanded="true" />
               </folding>
@@ -56,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/utils/segmentation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+              <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -142,9 +136,9 @@
         <option value="$PROJECT_DIR$/utils/segmentation.py" />
         <option value="$PROJECT_DIR$/utils/skeletonize.py" />
         <option value="$PROJECT_DIR$/utils/normalization.py" />
-        <option value="$PROJECT_DIR$/finegerprint_pipline.py" />
         <option value="$PROJECT_DIR$/utils/frequency.py" />
         <option value="$PROJECT_DIR$/utils/gabor_filter.py" />
+        <option value="$PROJECT_DIR$/finegerprint_pipline.py" />
       </list>
     </option>
   </component>
@@ -310,8 +304,8 @@
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22462203" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39524838" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22462203" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39524838" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -517,7 +511,7 @@
     <entry file="file://$PROJECT_DIR$/utils/segmentation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -531,22 +525,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finegerprint_pipline.py">
+    <entry file="file://$PROJECT_DIR$/utils/gabor_filter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="429">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#668#686#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/gabor_filter.py">
+    <entry file="file://$PROJECT_DIR$/finegerprint_pipline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        <state relative-caret-position="558">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
           <folding>
-            <element signature="e#668#686#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>

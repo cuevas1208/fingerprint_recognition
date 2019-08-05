@@ -73,5 +73,5 @@ if __name__ == '__main__':
     os.makedirs(output_dir, exist_ok=True)
     for i, img in enumerate(tqdm(images)):
         results = fingerprint_pipline(img)
-        # cv.imwrite(output_dir+str(i)+'.png', results)
-        cv.imshow('image pipeline', results); cv.waitKeyEx()
+        cv.imwrite(output_dir+str(i)+'.png', results)
+        # cv.imshow('image pipeline', results); cv.waitKeyEx()
