@@ -24,77 +24,56 @@ def gabor_filter(im, orient, freq, kx=0.65, ky=0.65):
     """
     angleInc = 3
     im = np.double(im)
-    rows,cols = im.shape
-    newim = np.zeros((rows,cols))
-    
-    freq_1d = np.reshape(freq,(1,rows*cols))
-    ind = np.where(freq_1d>0)
-    
-    ind = np.array(ind)
-    ind = ind[1,:]
-    
+    rows, cols = im.shape
+    return_img = np.zeros((rows,cols))
+
     # Round the array of frequencies to the nearest 0.01 to reduce the
     # number of distinct frequencies we have to deal with.
-    non_zero_elems_in_freq = freq_1d[0][ind]
+    freq_1d = freq.flatten()
+    frequency_ind = np.array(np.where(freq_1d>0))
+    non_zero_elems_in_freq = freq_1d[frequency_ind]
     non_zero_elems_in_freq = np.double(np.round((non_zero_elems_in_freq*100)))/100
     unfreq = np.unique(non_zero_elems_in_freq)
 
     # Generate filters corresponding to these distinct frequencies and
     # orientations in 'angleInc' increments.
-    sigmax = 1/unfreq[0]*kx
-    sigmay = 1/unfreq[0]*ky
-    
-    sze = np.round(3*np.max([sigmax,sigmay]))
-    x,y = np.meshgrid(np.linspace(-sze,sze,(2*sze + 1)),np.linspace(-sze,sze,(2*sze + 1)))
-    
-    reffilter = np.exp(-(( (np.power(x,2))/(sigmax*sigmax) + (np.power(y,2))/(sigmay*sigmay)))) * np.cos(2*np.pi*unfreq[0]*x) # this is the original gabor filter
+    sigma_x = 1/unfreq*kx
+    sigma_y = 1/unfreq*ky
+    block_size = np.round(3*np.max([sigma_x,sigma_y]))
+    array = np.linspace(-block_size,block_size,(2*block_size + 1))
+    x, y = np.meshgrid(array, array)
+
+    # gabor filter equation
+    reffilter = np.exp(-(((np.power(x,2))/(sigma_x*sigma_x) + (np.power(y,2))/(sigma_y*sigma_y)))) * np.cos(2*np.pi*unfreq[0]*x)
     filt_rows, filt_cols = reffilter.shape
-    gabor_filter = np.array(np.zeros((180//angleInc,filt_rows,filt_cols)))
-    
-    for o in range(0,180//angleInc):
-        # Generate rotated versions of the filter.  Note orientation
-        # image provides orientation *along* the ridges, hence +90
-        # degrees, and imrotate requires angles +ve anticlockwise, hence
-        # the minus sign.
-        rot_filt = scipy.ndimage.rotate(reffilter,-(o*angleInc + 90),reshape = False)
-        gabor_filter[o] = rot_filt
-                
-    # Find indices of matrix points greater than maxsze from the image
-    # boundary
-    maxsze = int(sze)
-    temp = freq>0
-    validr,validc = np.where(temp)    
-    
-    temp1 = validr>maxsze
-    temp2 = validr<rows - maxsze
-    temp3 = validc>maxsze
-    temp4 = validc<cols - maxsze
-    
-    final_temp = temp1 & temp2 & temp3 & temp4
-    
-    finalind = np.where(final_temp)
-    
-    # Convert orientation matrix values from radians to an index value
-    # that corresponds to round(degrees/angleInc)
+    gabor_filter = np.array(np.zeros((180//angleInc, filt_rows, filt_cols)))
+
+    # Generate rotated versions of the filter.
+    for degree in range(0,180//angleInc):
+        rot_filt = scipy.ndimage.rotate(reffilter,-(degree*angleInc + 90),reshape = False)
+        gabor_filter[degree] = rot_filt
+
+    # Convert orientation matrix values from radians to an index value that corresponds to round(degrees/angleInc)
     maxorientindex = np.round(180/angleInc)
     orientindex = np.round(orient/np.pi*180/angleInc)
-    
-    # do the filtering
     for i in range(0,rows//16):
         for j in range(0,cols//16):
             if(orientindex[i][j] < 1):
                 orientindex[i][j] = orientindex[i][j] + maxorientindex
             if(orientindex[i][j] > maxorientindex):
                 orientindex[i][j] = orientindex[i][j] - maxorientindex
-    finalind_rows,finalind_cols = np.shape(finalind)
-    sze = int(sze)
 
-    for k in range(0,finalind_cols):
-        r = validr[finalind[0][k]]
-        c = validc[finalind[0][k]]
-        img_block = im[r-sze:r+sze + 1][:,c-sze:c+sze + 1]
-        newim[r][c] = np.sum(img_block * gabor_filter[int(orientindex[r//16][c//16]) - 1])
+    # Find indices of matrix points greater than maxsze from the image boundary
+    block_size = int(block_size)
+    valid_row, valid_col = np.where(freq>0)
+    finalind = \
+        np.where((valid_row>block_size) & (valid_row<rows - block_size) & (valid_col>block_size) & (valid_col<cols - block_size))
 
-    gabor_img = 255 - np.array((newim < 0)*255).astype(np.uint8)
+    for k in range(0, np.shape(finalind)[1]):
+        r = valid_row[finalind[0][k]]; c = valid_col[finalind[0][k]]
+        img_block = im[r-block_size:r+block_size + 1][:,c-block_size:c+block_size + 1]
+        return_img[r][c] = np.sum(img_block * gabor_filter[int(orientindex[r//16][c//16]) - 1])
+
+    gabor_img = 255 - np.array((return_img < 0)*255).astype(np.uint8)
 
     return gabor_img

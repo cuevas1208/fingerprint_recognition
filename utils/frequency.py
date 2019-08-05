@@ -11,7 +11,7 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
     An image block the same size as im with all values set to the estimated ridge spatial frequency.  If a
     ridge frequency cannot be found, or cannot be found within the limits set by min and max Wavlength freqim is set to zeros.
     """
-    rows,cols = np.shape(im)
+    rows, cols = np.shape(im)
     
     # Find mean orientation within the block. This is done by averaging the
     # sines and cosines of the doubled angles before reconstructing the angle again.
@@ -23,8 +23,7 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
     rotim = scipy.ndimage.rotate(im,block_orient/np.pi*180 + 90,axes=(1,0),reshape = False,order = 3,mode = 'nearest')
 
     # Now crop the image so that the rotated image does not contain any
-    # invalid regions.  This prevents the projection down the columns
-    # from being mucked up.
+    # invalid regions.  This prevents the projection down the columns from being mucked up.
     cropsze = int(np.fix(rows/np.sqrt(2)))
     offset = int(np.fix((rows-cropsze)/2))
     rotim = rotim[offset:offset+cropsze][:,offset:offset+cropsze]
@@ -32,25 +31,23 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
     # Sum down the columns to get a projection of the grey values down the ridges.
     ridge_sum = np.sum(rotim,axis = 0)
     dilation = scipy.ndimage.grey_dilation(ridge_sum, kernel_size, structure=np.ones(kernel_size))
-
     ridge_noise = np.abs(dilation - ridge_sum); peak_thresh = 2;
-    maxpts = (ridge_noise<peak_thresh) & (ridge_sum > np.mean(ridge_sum))
+    maxpts = (ridge_noise < peak_thresh) & (ridge_sum > np.mean(ridge_sum))
     maxind = np.where(maxpts)
-    _, NoOfPeaks = np.shape(maxind)
+    _, no_of_peaks = np.shape(maxind)
     
-    # Determine the spatial frequency of the ridges by divinding the
+    # Determine the spatial frequency of the ridges by dividing the
     # distance between the 1st and last peaks by the (No of peaks-1). If no
-    # peaks are detected, or the wavelength is outside the allowed bounds,
-    # the frequency image is set to 0
-    if(NoOfPeaks<2):
-        freqim = np.zeros(im.shape)
+    # peaks are detected, or the wavelength is outside the allowed bounds, the frequency image is set to 0
+    if(no_of_peaks<2):
+        freq_block = np.zeros(im.shape)
     else:
-        waveLength = (maxind[0][-1] - maxind[0][0])/(NoOfPeaks - 1)
+        waveLength = (maxind[0][-1] - maxind[0][0])/(no_of_peaks - 1)
         if waveLength>=minWaveLength and waveLength<=maxWaveLength:
-            freqim = 1/np.double(waveLength) * np.ones(im.shape)
+            freq_block = 1/np.double(waveLength) * np.ones(im.shape)
         else:
-            freqim = np.zeros(im.shape)
-    return(freqim)
+            freq_block = np.zeros(im.shape)
+    return(freq_block)
 
 
 def ridge_freq(im, mask, orient, block_size, kernel_size, minWaveLength, maxWaveLength):
@@ -64,7 +61,8 @@ def ridge_freq(im, mask, orient, block_size, kernel_size, minWaveLength, maxWave
             image_block = im[row:row + block_size][:, col:col + block_size]
             angle_block = orient[row // block_size][col // block_size]
             if angle_block:
-                freq[row:row + block_size][:, col:col + block_size] = frequest(image_block, angle_block, kernel_size, minWaveLength, maxWaveLength)
+                freq[row:row + block_size][:, col:col + block_size] = frequest(image_block, angle_block, kernel_size,
+                                                                               minWaveLength, maxWaveLength)
 
     freq = freq*mask
     freq_1d = np.reshape(freq,(1,rows*cols))

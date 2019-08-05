@@ -31,4 +31,5 @@ def normalize(im, m0, v0):
     for i in range(x):
         for j in range(y):
             normilize_image[j, i] = normalize_pixel(im[j, i], v0, v, m, m0)
+
     return normilize_image

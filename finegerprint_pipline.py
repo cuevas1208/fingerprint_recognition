@@ -23,9 +23,9 @@ def fingerprint_pipline(input_img):
     normalized_img = normalize(input_img.copy(), float(100), float(100))
 
     # color threshold
-    threshold_img = normalized_img
-    # _, threshold_im = cv.threshold(normalized_im,127,255,cv.THRESH_OTSU)
-    # cv.imshow('color_threshold', threshold_im)
+    # threshold_img = normalized_img
+    # _, threshold_im = cv.threshold(normalized_img,127,255,cv.THRESH_OTSU)
+    # cv.imshow('color_threshold', normalized_img); cv.waitKeyEx()
 
     # ROI and normalisation
     (segmented_img, normim, mask) = create_segmented_and_variance_images(normalized_img, block_size, 0.2)
