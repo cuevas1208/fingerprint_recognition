@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2d2c81-0390-499f-a22a-799bcd4b9549" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/utils/README.me" beforeDir="false" afterPath="$PROJECT_DIR$/utils/README.me" afterDir="false" />
-    </list>
+    <list default="true" id="ab2d2c81-0390-499f-a22a-799bcd4b9549" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/utils/README.me">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
+              <caret column="21" lean-forward="true" selection-end-column="29083" />
             </state>
           </provider>
         </entry>
@@ -310,7 +308,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21256831" />
@@ -561,7 +559,7 @@
     <entry file="file://$PROJECT_DIR$/utils/README.me">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
+          <caret column="21" lean-forward="true" selection-end-column="29083" />
         </state>
       </provider>
     </entry>
