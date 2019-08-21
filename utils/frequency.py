@@ -15,21 +15,20 @@ def frequest(im, orientim, kernel_size, minWaveLength, maxWaveLength):
     
     # Find mean orientation within the block. This is done by averaging the
     # sines and cosines of the doubled angles before reconstructing the angle again.
-    cosorient = np.mean(np.cos(2*orientim))
-    sinorient = np.mean(np.sin(2*orientim))
+    cosorient = np.cos(2*orientim) # np.mean(np.cos(2*orientim))
+    sinorient = np.sin(2*orientim) # np.mean(np.sin(2*orientim))
     block_orient = math.atan2(sinorient,cosorient)/2
     
     # Rotate the image block so that the ridges are vertical
     rotim = scipy.ndimage.rotate(im,block_orient/np.pi*180 + 90,axes=(1,0),reshape = False,order = 3,mode = 'nearest')
 
-    # Now crop the image so that the rotated image does not contain any
-    # invalid regions.  This prevents the projection down the columns from being mucked up.
+    # Now crop the image so that the rotated image does not contain any invalid regions.
     cropsze = int(np.fix(rows/np.sqrt(2)))
     offset = int(np.fix((rows-cropsze)/2))
     rotim = rotim[offset:offset+cropsze][:,offset:offset+cropsze]
 
     # Sum down the columns to get a projection of the grey values down the ridges.
-    ridge_sum = np.sum(rotim,axis = 0)
+    ridge_sum = np.sum(rotim, axis = 0)
     dilation = scipy.ndimage.grey_dilation(ridge_sum, kernel_size, structure=np.ones(kernel_size))
     ridge_noise = np.abs(dilation - ridge_sum); peak_thresh = 2;
     maxpts = (ridge_noise < peak_thresh) & (ridge_sum > np.mean(ridge_sum))

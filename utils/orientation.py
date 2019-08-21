@@ -32,8 +32,8 @@ def calculate_angles(im, W, smoth=False):
             denominator = 0
             for l in range(j, min(j + W, y - 1)):
                 for k in range(i, min(i + W , x - 1)):
-                    Gx = round(Gx_[l, k])  # Gy = apply_kernel_at(im, ySobel, k, l)
-                    Gy = round(Gy_[l, k])  # Gy = round(Gy_[l, k])
+                    Gx = round(Gx_[l, k])  # horizontal gradients at l, k
+                    Gy = round(Gy_[l, k])  # vertial gradients at l, k
                     nominator += j1(Gx, Gy)
                     denominator += j2(Gx, Gy)
 
@@ -83,10 +83,8 @@ def smooth_angles(angles):
     :return:
     """
     angles = np.array(angles)
-    cos_angles = angles.copy()
-    sin_angles = angles.copy()
-    cos_angles = np.cos(cos_angles*2)
-    sin_angles = np.sin(sin_angles*2)
+    cos_angles = np.cos(angles.copy()*2)
+    sin_angles = np.sin(angles.copy()*2)
 
     kernel = np.array(kernel_from_function(5, gauss))
 
@@ -122,10 +120,3 @@ def visualize_angles(im, mask, angles, W):
     cv.resize(result, im.shape, result)
     return result
 
-
-def get_angle(left, right):
-    signum = lambda x: -1 if x < 0 else 1
-    angle = left - right
-    if abs(angle) > 180:
-        angle = -1 * signum(angle) * (360 - abs(angle))
-    return angle

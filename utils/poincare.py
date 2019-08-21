@@ -5,6 +5,7 @@ import numpy as np
 
 def poincare_index_at(i, j, angles, tolerance):
     """
+    compute the summation difference between the adjacent orientations such that the orientations is less then 90 degrees
     https://books.google.pl/books?id=1Wpx25D8qOwC&lpg=PA120&ots=9wRY0Rosb7&dq=poincare%20index%20fingerprint&hl=pl&pg=PA120#v=onepage&q=poincare%20index%20fingerprint&f=false
     :param i:
     :param j:
@@ -15,12 +16,19 @@ def poincare_index_at(i, j, angles, tolerance):
     cells = [(-1, -1), (-1, 0), (-1, 1),         # p1 p2 p3
             (0, 1),  (1, 1),  (1, 0),            # p8    p4
             (1, -1), (0, -1), (-1, -1)]          # p7 p6 p5
-    angles_around_index = [math.degrees(angles[i - k][j - l]) % 180 for k, l in cells]
+
+    angles_around_index = [math.degrees(angles[i - k][j - l]) for k, l in cells]
     index = 0
     for k in range(0, 8):
-        if abs(orientation.get_angle(angles_around_index[k], angles_around_index[k + 1])) > 90:
-            angles_around_index[k + 1] += 180
-        index += orientation.get_angle(angles_around_index[k], angles_around_index[k + 1])
+
+        # calculate the difference
+        difference = angles_around_index[k] - angles_around_index[k + 1]
+        if difference > 90:
+            difference -= 180
+        elif difference < -90:
+            difference += 180
+
+        index += difference
 
     if 180 - tolerance <= index <= 180 + tolerance:
         return "loop"
