@@ -4,11 +4,11 @@ import cv2
 
 if __name__ == "__main__":
     print('doron')
-    path = os.getcwd()
-    img_name ='fingerprint.jpg'
-    res = os.path.isfile(img_name)
+    path = os.getcwd() + '/utils'
+    img_name = "image.png"
+    res = os.path.isfile(path + '/' + img_name)
     img_path = f'{path}/{img_name}'
-    img = cv2.imread(img_name)
+    img = cv2.imread(img_path)
     cv2.imshow(img_name, img)
     print('what')
     # image_enhancer = FingerprintImageEnhancer()
