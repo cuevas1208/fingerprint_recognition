@@ -7,7 +7,7 @@ Created on Mon Nov 4 19:46:32 2020
 
 import math
 import numpy as np
-from cv2 import cv2
+import cv2
 from scipy import signal
 from scipy import ndimage
 import scipy
@@ -526,7 +526,7 @@ class FingerprintImageEnhancer:
             resize (bool, optional): resize the input image. Defaults to True.
 
         Returns:
-            _type_np.ndarray: return the enhanced image.
+            _type_np.ndarray: return the enhanced image.            
         """
         if resize:
             rows, cols = np.shape(img)
