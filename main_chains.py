@@ -1,7 +1,5 @@
-# from main2 import FingerprintImageEnhancer
 import os
 import cv2
-
 from main_full import calculate_minutiae_weights, draw_ridges_count_on_region, get_best_region, skeletonize
 
 from utils.segmentation import create_segmented_and_variance_images
@@ -17,7 +15,6 @@ if __name__ == "__main__":
     image = cv2.imread(img_path, 0)
     cv2.imshow(img_name, image)
 
-    #Option 3 Alg (WON!!!):
     block_size = 16
     normalized_img = normalize(image.copy(), float(100), float(100))
     (segmented_img, normim, mask) = create_segmented_and_variance_images(normalized_img, block_size, 0.2)
