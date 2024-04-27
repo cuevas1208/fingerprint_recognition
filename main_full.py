@@ -55,8 +55,7 @@ def lines_orientation(img, grad_rate=1, block_rate=7, orient_smooth_rate=7):
     return orientation
 
 
-def calculate_ridge_frequencies(image, orientation, mask, block_size=38, window_size=5, min_wavelength=5,
-  
+def calculate_ridge_frequencies(image, orientation, mask, block_size=38, window_size=5, min_wavelength=5, max_wavelength=10):
     frequencies = np.zeros_like(image)
 
     for row in range(0, frequencies.shape[0] - block_size, block_size):
