@@ -283,19 +283,15 @@ def count_fingerprint_ridges(image):
 
 
 if __name__ == '__main__':
+    img_name = "M89_f0115_03.png"
     input_path = './all_png_files/'
     output_path = './all_png_files_out/'
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    for img_name in os.listdir(input_path):
-        img_dir = os.path.join(input_path, img_name)
-        greyscale_image = cv2.imread(img_dir, 0)
-        if (greyscale_image is None):
-            continue
-        print(img_name)
-        output_image = count_fingerprint_ridges(greyscale_image)
 
-
-
-        cv2.imwrite(output_path + img_name, output_image)
+    img_dir = os.path.join(input_path, img_name)
+    greyscale_image = cv2.imread(img_dir, 0)
+    print(img_name)
+    output_image = count_fingerprint_ridges(greyscale_image)
+    cv2.imwrite(output_path + img_name, output_image)
