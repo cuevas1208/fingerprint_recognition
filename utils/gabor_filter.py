@@ -40,7 +40,7 @@ def gabor_filter(im, orient, freq, kx=0.65, ky=0.65):
     sigma_x = 1/unfreq*kx
     sigma_y = 1/unfreq*ky
     block_size = np.round(3*np.max([sigma_x,sigma_y]))
-    array = np.linspace(-block_size,block_size,(2*block_size + 1))
+    array = np.linspace(int(-block_size),int(block_size),int(2*block_size + 1))
     x, y = np.meshgrid(array, array)
 
     # gabor filter equation
