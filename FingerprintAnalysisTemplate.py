@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from skimage.morphology import skeletonize as ski_skeletonize
 import os
-from main_finger_print_algo import calculate_minutiae_weights, draw_ridges_count_on_region, get_best_region, skeletonize
+from main_full import calculate_minutiae_weights, draw_ridges_count_on_region, get_best_region, skeletonize
 from utils.segmentation import create_segmented_and_variance_images
 from utils.normalization import normalize
 from utils.gabor_filter import gabor_filter
