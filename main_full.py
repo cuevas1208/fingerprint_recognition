@@ -266,17 +266,21 @@ def count_fingerprint_ridges(image):
     images = []
 
     print(image.shape)
-    cropped_img = image[:-32, :]
-    mask, normalized_img = normalize_and_segment(cropped_img)
+    # cropped_img = image[:-32, :]
+    mask, normalized_img = normalize_and_segment(image)
+
+    cv2.imwrite('normalized_image.png', normalized_img)
 
     orientation = lines_orientation(normalized_img)
 
     frequency = calculate_ridge_frequencies(normalized_img, orientation, mask)
 
     enhanced_image = apply_gabor_filter(normalized_img, frequency, orientation)
+    cv2.imwrite('enhanced_image.png', enhanced_image)
 
     thin_image = skeletonize(enhanced_image)
-
+    cv2.imwrite('skeletonize_image.png', thin_image)
+    
     minutiae_weights_image = calculate_minutiae_weights(thin_image)
 
     block_size = 15  # 120/8
@@ -286,18 +290,30 @@ def count_fingerprint_ridges(image):
 
 
 if __name__ == '__main__':
-    input_path = './all_png_files/'
-    output_path = './all_png_files_out/'
+    path = os.getcwd() + '/all_png_files'
+    img_name = "M89_f0115_03.png"
+    img_path = f'{path}/{img_name}'
+    image = cv2.imread(img_path, 0)
+    image = image[:-32, :]
+    output_image = count_fingerprint_ridges(image)
 
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-    for img_name in os.listdir(input_path):
-        img_dir = os.path.join(input_path, img_name)
-        greyscale_image = cv2.imread(img_dir, 0)
-        if (greyscale_image is None):
-            continue
-        print(img_name)
-        output_image = count_fingerprint_ridges(greyscale_image)
-        cv2.imwrite(output_path + img_name, output_image)
+
+
+    # input_path = './all_png_files/'
+    # output_path = './all_png_files_out/'
+
+    # if not os.path.exists(output_path):
+    #     os.makedirs(output_path)
+
+    
+    # for img_name in os.listdir(input_path):
+    #     img_dir = os.path.join(input_path, img_name)
+    #     greyscale_image = cv2.imread(img_dir, 0)
+    #     if (greyscale_image is None):
+    #         continue
+    #     print(img_name)
+    #     cropped_img = greyscale_image[:-32, :]
+    #     output_image = count_fingerprint_ridges(cropped_img)
+    #     cv2.imwrite(output_path + img_name, output_image)
 
 

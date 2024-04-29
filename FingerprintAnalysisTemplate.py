@@ -113,6 +113,8 @@ if __name__ == '__main__':
     img_name = "M89_f0115_03.png"
     img_path = f'{path}/{img_name}'
     image = cv2.imread(img_path, 0)
+    image = image[:-32, :]
+
     cv2.imshow(img_name, image)
     cv2.waitKey()
 
