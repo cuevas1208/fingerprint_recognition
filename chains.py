@@ -92,5 +92,8 @@ normalization_handler = NormalizationHandler(segmentation_handler)
 
 # Getting images sequence
 images = normalization_handler.process((image, block_size))
-for i, img in enumerate(images):
-    cv2.imwrite(f'result_image_chain_{i}.png', img)
+images.pop(1)
+images.pop(-3)
+labels = ['result', 'skeleton', 'gabor', 'orientation', 'segmented', 'normalized', 'original']
+for step, (img, name) in enumerate(zip(images[::-1], labels[::-1])):
+    cv2.imwrite(f'chain_{name}_step{step}.png', img)

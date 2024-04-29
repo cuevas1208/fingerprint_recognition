@@ -264,33 +264,27 @@ def count_fingerprint_ridges(image):
     
     # remove white stop from the bottom
     images = []
-    images.append(image)
+
     print(image.shape)
     cropped_img = image[:-32, :]
     mask, normalized_img = normalize_and_segment(cropped_img)
-    images.append(normalized_img)
 
     orientation = lines_orientation(normalized_img)
-    images.append(orientation)
 
     frequency = calculate_ridge_frequencies(normalized_img, orientation, mask)
-    images.append(frequency)
 
     enhanced_image = apply_gabor_filter(normalized_img, frequency, orientation)
-    images.append(enhanced_image)
 
     thin_image = skeletonize(enhanced_image)
-    images.append(thin_image)
 
     minutiae_weights_image = calculate_minutiae_weights(thin_image)
-    images.append(minutiae_weights_image)
 
     block_size = 15  # 120/8
     best_region = get_best_region(thin_image, minutiae_weights_image, block_size, mask)
     result_image = draw_ridges_count_on_region(best_region, image, thin_image, block_size)
-    images.append(result_image)
+    images = [result_image, thin_image, enhanced_image, frequency, orientation, normalized_img, image]
 
-    return result_image, images
+    return images
 
 
 if __name__ == '__main__':
@@ -304,7 +298,8 @@ if __name__ == '__main__':
     img_dir = os.path.join(input_path, img_name)
     greyscale_image = cv2.imread(img_dir, 0)
     print(img_name)
-    result_image, images = count_fingerprint_ridges(greyscale_image)
+    images = count_fingerprint_ridges(greyscale_image)
 
-    for i, img in enumerate(images):
-        cv2.imwrite(f'result_image_full_{i}.png', img)
+    labels = ['result', 'skeleton', 'gabor', 'orientation', 'segmented', 'normalized', 'original']
+    for i, (img, name) in enumerate(zip(images[::-1], labels[::-1])):
+        cv2.imwrite(f'main_full_{name}_step{i}.png', img)
