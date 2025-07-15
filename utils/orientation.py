@@ -18,8 +18,8 @@ def calculate_angles(im, W, smoth=False):
     (y, x) = im.shape
 
     sobelOperator = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]
-    ySobel = np.array(sobelOperator).astype(np.int)
-    xSobel = np.transpose(ySobel).astype(np.int)
+    ySobel = np.array(sobelOperator).astype(np.int_)
+    xSobel = np.transpose(ySobel).astype(np.int_)
 
     result = [[] for i in range(1, y, W)]
 
